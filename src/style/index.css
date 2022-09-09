@@ -1,3 +1,10 @@
+body {
+    background-color: black;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+    background-size: 75vw;
+}
+
 #content img {
     width: 300px; 
     height: 300px;  
