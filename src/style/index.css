@@ -1,8 +1,19 @@
+:root, body {
+    padding: 0px;
+    margin: 0px;
+}
+
 body {
     background-color: black;
-    background-position: center 20%;
+    background-position: center 0%;
     background-repeat: no-repeat;
     background-size: 75vw;
+}
+
+#background-tint {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100vw;
+    height: 100vh;
 }
 
 #content img {

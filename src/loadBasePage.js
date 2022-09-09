@@ -1,9 +1,13 @@
-import burgerPlateImg from './img/burger-plate.jpg';
+import burgerPlateImg from './img/small-burger-plate.jpg';
 
 export const loadBasePage = () => {
     // Body
     const body = document.body;
     body.style.backgroundImage = `url(${burgerPlateImg})`;
+        // Div : Background tint
+        const divBackgroundTint = document.createElement('div');
+        divBackgroundTint.setAttribute('id', 'background-tint');
+        body.appendChild(divBackgroundTint);
     
     // Header
     const header = document.createElement('header');
