@@ -1,10 +1,4 @@
-import { load } from './basicSite';
+import { loadBasePage } from './loadBasePage';
 import './style/index.css'
 
-console.log('Hello Restaurant');
-
-const content = document.createElement('div');
-content.setAttribute('id', 'content');
-document.body.appendChild(content);
-
-load();
+loadBasePage();
