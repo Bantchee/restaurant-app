@@ -2,6 +2,7 @@ import burgerPlateImg from './img/small-burger-plate.jpg';
 import instagramSvg from './img/instagram.svg'
 import youtubeSvg from './img/youtube.svg'
 import twitterSvg from './img/twitter.svg'
+import githubSvg from './img/github.svg'
 
 export const loadBasePage = () => {
     // Body
@@ -184,6 +185,20 @@ export const loadBasePage = () => {
                     submitBtn.textContent = "Submit";
 
         // Div : Github Footer
+        const gitHubFooter = document.createElement('div');
+        footer.appendChild(gitHubFooter);
+        gitHubFooter.classList.add('github-footer');
             // Para : Copy Right Jar'Zeno Jarret
-            // Img / Link : GitHub
+            const text = document.createElement('p');
+            gitHubFooter.appendChild(text);
+            text.classList.add('text');
+            text.innerHTML = "&#169; Jar'Zeno Jarrett"
+            // Btn : YouTube
+            const githubBtn = document.createElement('button');
+            gitHubFooter.appendChild(githubBtn);
+            githubBtn.classList.add('github');
+                // Img : YouTube
+                const githubImg = document.createElement('img');
+                githubBtn.appendChild(githubImg);
+                githubImg.setAttribute('src', githubSvg);
 };
