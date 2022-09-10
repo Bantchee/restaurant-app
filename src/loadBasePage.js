@@ -58,4 +58,27 @@ export const loadBasePage = () => {
     // Footer
     const footer = document.createElement('footer');
     body.appendChild(footer);
+
+            // Div : Restaurant Footer
+            // Div : Address
+                // Para.title : Address 
+                // Para : 420 Greendale Lane, Reed City
+            // Div : Hours
+                // Para : Mon-Fri : 8AM-8PM
+                // Para : Sat-Sun : 8AM-4PM
+            // Div : Social Links
+                // Img / Link : Instagram
+                // Img / Link : YouTube
+                // Img / Link : Twitter
+            // Div : Contact
+                // Call : +1 (312) 532 5464
+                // Email : support@springsclover.com
+            // Div : Subscribe
+                // Form
+                    // Label : Email
+                    // Input : Email
+                    // Btn : Submit
+        // Div : Github Footer
+            // Para : Copy Right Jar'Zeno Jarret
+            // Img / Link : GitHub
 };
