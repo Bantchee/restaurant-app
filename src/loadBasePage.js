@@ -26,28 +26,28 @@ export const loadBasePage = () => {
             const homeLink = document.createElement('a');
             navbar.appendChild(homeLink);
             homeLink.classList.add('nav-link', 'current-page');
-            homeLink.setAttribute('href', '#');
+            homeLink.setAttribute('href', '');
             homeLink.textContent = 'Home';
 
             // a : Menu
             const menuLink = document.createElement('a');
             navbar.appendChild(menuLink);
             menuLink.classList.add('nav-link');
-            menuLink.setAttribute('href', '#');
+            menuLink.setAttribute('href', '');
             menuLink.textContent = 'Menu';
 
             // a : About
             const aboutLink = document.createElement('a');
             navbar.appendChild(aboutLink);
             aboutLink.classList.add('nav-link');
-            aboutLink.setAttribute('href', '#');
+            aboutLink.setAttribute('href', '');
             aboutLink.textContent = 'About';
 
             // a : Contact
             const contactLink = document.createElement('a');
             navbar.appendChild(contactLink);
             contactLink.classList.add('nav-link');
-            contactLink.setAttribute('href', '#');
+            contactLink.setAttribute('href', '');
             contactLink.textContent = 'Contact';
 
     // Div : Content
