@@ -48,7 +48,7 @@ export const loadBasePage = () => {
             navbar.appendChild(contactLink);
             contactLink.classList.add('nav-link');
             contactLink.setAttribute('href', '#');
-            contactLink.textContent = 'About';
+            contactLink.textContent = 'Contact';
 
     // Div : Content
     const content = document.createElement('div');
