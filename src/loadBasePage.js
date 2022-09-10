@@ -74,7 +74,7 @@ export const loadBasePage = () => {
                 addressContainer.appendChild(addressTitle);
                 addressTitle.classList.add('title');
                 addressTitle.textContent = "Address";
-                // Para : 420 Greendale Lane, Reed City
+                // Para : 420 Greendale Lane, Reed City 
                 const addressText = document.createElement('p');
                 addressContainer.appendChild(addressText);
                 addressText.classList.add('text');
