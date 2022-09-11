@@ -72,10 +72,12 @@ header nav .current-page {
 
 footer .title {
     color: var(--white);
+    font-size: 1.5rem;
 }
 
 footer .text {
     color: var(--white);
+    font-size: 1rem;
 }
 
 footer p {
@@ -83,19 +85,75 @@ footer p {
     margin: 0px;
 }
 
-footer .restaurant {
-    background-color: var(--green);
-    padding: 8px 0px;
+footer button {
+    cursor: pointer;
+}
+
+footer .social-container {
     display: flex;
-    column-gap: 24px;
+    column-gap: 8px;
     justify-content: center;
     align-items: center;
+}
+
+footer button.social {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid white;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer button.social:hover {
+    background-color: black;
+}
+
+footer button.social img {
+    width: 30px;
+    height: 30px;
+}
+
+footer .restaurant {
+    background-color: var(--green);
+    padding: 16px 0px;
+    display: flex;
+    justify-content: center;
+    column-gap: 24px;
+}
+
+footer .restaurant .text {
+    padding-left: 8px;
 }
 
 footer .restaurant ul {
     padding: 0px;
     margin: 0px;
     list-style: none;
+}
+
+footer .restaurant .newsletter-container button {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid black;
+    border-radius: 8px;
+    display: block;
+    justify-self: center;
+    width: 100px;
+    height: 30px;
+    font-size: 1em;
+    margin-left: 40px;
+    margin-top: 8px;
+}
+
+footer .restaurant .newsletter-container input[type="email"] {
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+footer .restaurant .newsletter-container button:hover {
+    background-color: rgba(255, 255, 255, 1);
 }
 
 footer .github-footer {
@@ -105,4 +163,8 @@ footer .github-footer {
     column-gap: 8px;
     justify-content: center;
     align-items: center;
+}
+
+footer .github-footer .text {
+    font-size: 1.5em;
 }

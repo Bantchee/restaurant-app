@@ -69,7 +69,7 @@ export const loadBasePage = () => {
             // Div : Address
             const addressContainer = document.createElement('div');
             restaurantFooter.appendChild(addressContainer);
-            addressContainer.classList.add('address-container');
+            addressContainer.classList.add('address-container', 'container');
                 // Para.title : Address 
                 const addressTitle = document.createElement('p');
                 addressContainer.appendChild(addressTitle);
@@ -84,7 +84,7 @@ export const loadBasePage = () => {
             // Div : Hours
             const hoursContainer = document.createElement('div');
             restaurantFooter.appendChild(hoursContainer);
-            hoursContainer.classList.add('hours-container');
+            hoursContainer.classList.add('hours-container', 'container');
                 // Para : Hours
                 const hoursTitle = document.createElement('p');
                 hoursContainer.appendChild(hoursTitle);
@@ -104,41 +104,10 @@ export const loadBasePage = () => {
                     hourListItem2.classList.add('text');
                     hourListItem2.textContent = "Sat-Sun : 8AM-4PM";
 
-            // Div : Social Links
-            const socialLinksContainer = document.createElement('div');
-            restaurantFooter.appendChild(socialLinksContainer);
-            socialLinksContainer.classList.add('social-container');
-                // Btn : Instagram
-                const instagramBtn = document.createElement('button');
-                socialLinksContainer.appendChild(instagramBtn);
-                instagramBtn.classList.add('instagram');
-                    // Img : Instagram
-                    const instagramImg = document.createElement('img');
-                    instagramBtn.appendChild(instagramImg);
-                    instagramImg.setAttribute('src', instagramSvg);
-
-                // Btn : YouTube
-                const youtubeBtn = document.createElement('button');
-                socialLinksContainer.appendChild(youtubeBtn);
-                youtubeBtn.classList.add('youtube');
-                    // Img : YouTube
-                    const youtubeImg = document.createElement('img');
-                    youtubeBtn.appendChild(youtubeImg);
-                    youtubeImg.setAttribute('src', youtubeSvg);
-
-                // Btn : Twitter
-                const twitterBtn = document.createElement('button');
-                socialLinksContainer.appendChild(twitterBtn);
-                twitterBtn.classList.add('twitter');
-                    // Img : Twitter
-                    const twitterImg = document.createElement('img');
-                    twitterBtn.appendChild(twitterImg);
-                    twitterImg.setAttribute('src', twitterSvg);
-
             // Div : Contact
             const contactContainer = document.createElement('div');
             restaurantFooter.appendChild(contactContainer);
-            contactContainer.classList.add('contact-container');
+            contactContainer.classList.add('contact-container', 'container');
                 // Para.title : contact
                 const contactTitle = document.createElement('para');
                 contactContainer.appendChild(contactTitle);
@@ -158,18 +127,18 @@ export const loadBasePage = () => {
                     contactListItem2.classList.add('text');
                     contactListItem2.textContent = "Email : support@springsclover.com";
 
-            // Div : subscribe
-            const subscribeContainer = document.createElement('div');
-            restaurantFooter.appendChild(subscribeContainer);
-            subscribeContainer.classList.add('subscribe-container');
-                // Para.title : Subscribe
-                const subscribeTitle = document.createElement('p');
-                subscribeContainer.appendChild(subscribeTitle);
-                subscribeTitle.classList.add('title');
-                subscribeTitle.textContent = 'Subscribe';
+            // Div : Newsletter
+            const newsletterContainer = document.createElement('div');
+            restaurantFooter.appendChild(newsletterContainer);
+            newsletterContainer.classList.add('newsletter-container', 'container');
+                // Para.title : Newsletter
+                const newsletterTitle = document.createElement('p');
+                newsletterContainer.appendChild(newsletterTitle);
+                newsletterTitle.classList.add('title');
+                newsletterTitle.textContent = 'Newsletter';
                 // Form
                 const subForm = document.createElement('form');
-                subscribeContainer.appendChild(subForm);
+                newsletterContainer.appendChild(subForm);
                     // Label : Email
                     const emailLabel = document.createElement('label');
                     subForm.appendChild(emailLabel);
@@ -179,11 +148,43 @@ export const loadBasePage = () => {
                     const emailInput = document.createElement('input');
                     subForm.appendChild(emailInput);
                     emailInput.setAttribute('type', 'email');
-                    // Btn : Submit
+                    // Btn : Sign Up
                     const submitBtn = document.createElement('button');
                     subForm.appendChild(submitBtn);
-                    submitBtn.textContent = "Submit";
+                    submitBtn.classList.add('sign-up');
+                    submitBtn.textContent = "Sign Up";
 
+            // Div : Social Links
+            const socialLinksContainer = document.createElement('div');
+            restaurantFooter.appendChild(socialLinksContainer);
+            socialLinksContainer.classList.add('social-container', 'container');
+                // Btn : Instagram
+                const instagramBtn = document.createElement('button');
+                socialLinksContainer.appendChild(instagramBtn);
+                instagramBtn.classList.add('instagram', 'social');
+                    // Img : Instagram
+                    const instagramImg = document.createElement('img');
+                    instagramBtn.appendChild(instagramImg);
+                    instagramImg.setAttribute('src', instagramSvg);
+
+                // Btn : YouTube
+                const youtubeBtn = document.createElement('button');
+                socialLinksContainer.appendChild(youtubeBtn);
+                youtubeBtn.classList.add('youtube', 'social');
+                    // Img : YouTube
+                    const youtubeImg = document.createElement('img');
+                    youtubeBtn.appendChild(youtubeImg);
+                    youtubeImg.setAttribute('src', youtubeSvg);
+
+                // Btn : Twitter
+                const twitterBtn = document.createElement('button');
+                socialLinksContainer.appendChild(twitterBtn);
+                twitterBtn.classList.add('twitter', 'social');
+                    // Img : Twitter
+                    const twitterImg = document.createElement('img');
+                    twitterBtn.appendChild(twitterImg);
+                    twitterImg.setAttribute('src', twitterSvg);
+                    
         // Div : Github Footer
         const gitHubFooter = document.createElement('div');
         footer.appendChild(gitHubFooter);
@@ -193,11 +194,11 @@ export const loadBasePage = () => {
             gitHubFooter.appendChild(text);
             text.classList.add('text');
             text.innerHTML = "&#169; Jar'Zeno Jarrett"
-            // Btn : YouTube
+            // Btn : GitHub
             const githubBtn = document.createElement('button');
             gitHubFooter.appendChild(githubBtn);
-            githubBtn.classList.add('github');
-                // Img : YouTube
+            githubBtn.classList.add('github', 'social');
+                // Img : GitHub
                 const githubImg = document.createElement('img');
                 githubBtn.appendChild(githubImg);
                 githubImg.setAttribute('src', githubSvg);
