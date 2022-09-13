@@ -7,7 +7,12 @@ import githubSvg from './img/github.svg'
 export const loadBasePage = () => {
     // Body
     const body = document.body;
-    body.style.backgroundImage = `url(${burgerPlateImg})`;
+        // Img : Background Image
+        const backgroundImg = document.createElement('img');
+        body.appendChild(backgroundImg);
+        backgroundImg.setAttribute('src', burgerPlateImg);
+        backgroundImg.setAttribute('id','background-img');
+
         // Div : Background tint
         const divBackgroundTint = document.createElement('div');
         divBackgroundTint.setAttribute('id', 'background-tint');

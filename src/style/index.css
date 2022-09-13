@@ -14,11 +14,19 @@
 /* Body */
 body {
     background-color: black;
-    background-position: center 0%;
-    background-repeat: no-repeat;
-    background-size: 75vw;
+
     display: grid;
     grid-template-rows: 1fr 3fr 1fr;
+}
+
+#background-img {
+    width: 65vw;
+    /* height: 120vh; */
+    display: block;
+    position: fixed;
+    z-index: -1;
+    left: 17.5%;
+    top: -10%;
 }
 
 #background-tint {
