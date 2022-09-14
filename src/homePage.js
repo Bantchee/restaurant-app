@@ -1,3 +1,7 @@
+import burgerImg from './img/burger.jpg';
+import pizzaImg from './img/pizza.jpg';
+import iceCreamImg from './img/ice-cream.jpg';
+
 export const homePage = () => {
     const state = {
         content: document.querySelector('#content'),
@@ -31,15 +35,22 @@ export const homePage = () => {
         divSlideContainer.classList.add('slide-container');
 
             // Slide 1
+            slide(0, burgerImg);
 
             // Slide 2
+            slide(1, pizzaImg);
 
             // Slide 3
+            slide(2, iceCreamImg);
     };
 
-    const slide = (num, url) => {
+    const slide = (num, imgUrl) => {
+        // Div : Slide
         const divSlide = document.createElement('div');
-        
+        state.slideContainer.appendChild(divSlide)
+        state[`slide${num}`] = divSlide;
+        divSlide.classList.add('slide', `slide${num}`);
+        divSlide.style.backgroundImage = `url(${imgUrl})`;
     };
 
     const dotContainer = () => {

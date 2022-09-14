@@ -2,6 +2,7 @@
     padding: 0px;
     margin: 0px;
 
+    --black: #000000;
     --white: #FEFEFC;
     --gold: #ffd700;
     --light-green: #9CA193;
@@ -16,16 +17,16 @@ body {
     background-color: black;
 
     display: grid;
-    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-rows: 150px 1fr 150px;
 }
 
 #background-img {
-    width: 65vw;
+    width: 75vw;
     /* height: 120vh; */
     display: block;
     position: fixed;
     z-index: -1;
-    left: 17.5%;
+    left: 12.5%;
     top: -10%;
 }
 
@@ -75,6 +76,22 @@ header nav .current-page {
 }
 
 /* Content */
+
+#content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#content .slide-show .slide-container .slide {
+    width: 425px;
+    height: 425px;
+    border-radius: 100%;
+    border: 5px var(--black) solid;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 /* Footer */
 
