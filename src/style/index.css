@@ -124,11 +124,11 @@ header nav .current-page {
     border-radius: 3px 0 0 3px;
 }
 
+/* Prev arrow positioning to left of slides*/
 #content .slide-show .slide-container .prev {
     left: 5px;
 }
 
-/* Prev arrow positioning to left of slides*/
 #content .slide-show .slide-container .arrow:hover {
     background-color: rgba(0,0,0,0.8);
 }
