@@ -42,6 +42,20 @@ export const homePage = () => {
 
             // Slide 3
             slide(2, iceCreamImg);
+
+            // Left Arrow 
+            const leftArrow = document.createElement('a');
+            divSlideContainer.appendChild(leftArrow);
+            state['leftArrow'] = leftArrow;
+            leftArrow.classList.add('arrow', 'prev');
+            leftArrow.innerHTML = '&#10095;';
+
+            // Right Arrow
+            const rightArrow = document.createElement('a');
+            divSlideContainer.appendChild(rightArrow);
+            state['rightArrow'] = rightArrow;
+            rightArrow.classList.add('arrow', 'next');
+            rightArrow.innerHTML = '&#10094;';
     };
 
     const slide = (num, imgUrl) => {

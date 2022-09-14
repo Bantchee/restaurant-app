@@ -83,6 +83,15 @@ header nav .current-page {
     justify-content: center;
 }
 
+#content .slide-show .slide-container {
+    position: relative;
+}
+
+/* hide slides by default */
+#content .slide-show .slide-container .slide {
+    display: none;
+}
+
 #content .slide-show .slide-container .slide {
     width: 425px;
     height: 425px;
@@ -91,6 +100,34 @@ header nav .current-page {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/* Next and previous buttons */
+#content .slide-show .slide-container .arrow {
+    color: var(--white);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+
+}
+
+/* Next arrow positioning to right of slides*/
+#content .slide-show .slide-container .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Prev arrow positioning to left of slides*/
+#content .slide-show .slide-container .arrow:hover {
+    background-color: rgba(0,0,0,0.8);
 }
 
 /* Footer */
