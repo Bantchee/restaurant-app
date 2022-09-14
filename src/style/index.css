@@ -17,7 +17,7 @@ body {
     background-color: black;
 
     display: grid;
-    grid-template-rows: 150px 1fr 150px;
+    grid-template-rows: 150px calc(100vh - 150px) 150px;
 }
 
 #background-img {
@@ -93,8 +93,8 @@ header nav .current-page {
 }
 
 #content .slide-show .slide-container .slide {
-    width: 425px;
-    height: 425px;
+    width: 450px;
+    height: 450px;
     border-radius: 100%;
     border: 5px var(--black) solid;
     background-position: center center;
@@ -116,13 +116,16 @@ header nav .current-page {
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-
 }
 
 /* Next arrow positioning to right of slides*/
 #content .slide-show .slide-container .next {
-    right: 0;
+    right: 5px;
     border-radius: 3px 0 0 3px;
+}
+
+#content .slide-show .slide-container .prev {
+    left: 5px;
 }
 
 /* Prev arrow positioning to left of slides*/
