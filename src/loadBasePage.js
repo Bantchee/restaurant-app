@@ -3,7 +3,6 @@ import instagramSvg from './img/instagram.svg'
 import youtubeSvg from './img/youtube.svg'
 import twitterSvg from './img/twitter.svg'
 import githubSvg from './img/github.svg'
-import { homePage } from './homePage';
 
 export const loadBasePage = () => {
     // Body
