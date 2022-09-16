@@ -9,12 +9,13 @@ export const homePage = () => {
     };
 
     const render = () => {
+        // reset content class list
+        state.content.classList = "";
+
+        // add home-page to class list
+        state.content.classList.add("home-page");
+        
         slideShow();
-        // Div : Slide Show Container
-            // Div : Slide Container
-                // Div: Slides
-            // Div : Dot Container
-                // Span : Dots
         bindings();
     };
 
@@ -32,6 +33,16 @@ export const homePage = () => {
             console.log('prevArrow');
             plusSlides(-1);
         }); 
+
+        // Get Dots
+        const dots = document.getElementsByClassName('dot');
+        
+        // Bind for dots
+        for(let i = 0; i < dots.length; i++) {
+            dots[i].addEventListener('click',() => {
+                currentSlide(i + 1);
+            });
+        };
     };
 
     const slideShow = () => {
@@ -81,18 +92,28 @@ export const homePage = () => {
     const slide = (num, imgUrl) => {
         // Div : Slide
         const divSlide = document.createElement('div');
-        state.slideContainer.appendChild(divSlide)
-        state[`slide${num}`] = divSlide;
+        state.slideContainer.appendChild(divSlide);
         divSlide.classList.add('slide', `slide${num}`);
         divSlide.style.backgroundImage = `url(${imgUrl})`;
     };
 
     const dotContainer = () => {
-        // Div : Slide Container
+        // Div : Dot Container
         const divDotContainer = document.createElement('div');
         state.slideShow.appendChild(divDotContainer);
         state['dotContainer'] = divDotContainer;
         divDotContainer.classList.add('dot-container');
+
+        dot(1);
+        dot(2);
+        dot(3);
+    };
+
+    const dot = (num) => {
+        // Span : Dot
+        const spanDot = document.createElement('span');
+        state.dotContainer.appendChild(spanDot);
+        spanDot.classList.add('dot', `dot-${num}`);
     };
 
     // Next & Previous arrow controls
@@ -108,17 +129,17 @@ export const homePage = () => {
     const showSlides = (n) => {
         let i;
         let slides = document.getElementsByClassName('slide');
-        // let dots = document.getElementsByClassName('dots');
+        let dots = document.getElementsByClassName('dot');
         if (n > slides.length) {state.slideIndex = 1};
         if (n < 1) {state.slideIndex = slides.length};
         for(i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
-        // for (i = 0; i < dots.length; i++) {
-        //     dots[i].className = dots[i].className.replace(" active", "");
-        // }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].classList.remove("active");
+        }
         slides[state.slideIndex-1].style.display = "block";
-        // dots[slideIndex-1].className += " active";
+        dots[state.slideIndex-1].classList.add("active");
     }
 
     return Object.assign({}, 
