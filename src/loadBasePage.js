@@ -3,6 +3,7 @@ import instagramSvg from './img/instagram.svg'
 import youtubeSvg from './img/youtube.svg'
 import twitterSvg from './img/twitter.svg'
 import githubSvg from './img/github.svg'
+import { homePage } from './homePage';
 
 export const loadBasePage = () => {
     // Body
@@ -31,31 +32,31 @@ export const loadBasePage = () => {
         // Nav
         const navbar = document.createElement('nav');
         header.appendChild(navbar);
-            // a : Home
-            const homeLink = document.createElement('a');
+            // Btn : Home
+            const homeLink = document.createElement('button');
             navbar.appendChild(homeLink);
-            homeLink.classList.add('nav-link', 'current-page');
+            homeLink.classList.add('nav-link', 'home-link', 'current-page');
             homeLink.setAttribute('href', '');
             homeLink.textContent = 'Home';
 
-            // a : Menu
-            const menuLink = document.createElement('a');
+            // Btn : Menu
+            const menuLink = document.createElement('button');
             navbar.appendChild(menuLink);
-            menuLink.classList.add('nav-link');
+            menuLink.classList.add('nav-link', 'menu-link');
             menuLink.setAttribute('href', '');
             menuLink.textContent = 'Menu';
 
-            // a : About
-            const aboutLink = document.createElement('a');
+            // Btn : About
+            const aboutLink = document.createElement('button');
             navbar.appendChild(aboutLink);
-            aboutLink.classList.add('nav-link');
+            aboutLink.classList.add('nav-link', 'about-link');
             aboutLink.setAttribute('href', '');
             aboutLink.textContent = 'About';
 
-            // a : Contact
-            const contactLink = document.createElement('a');
+            // Btn : Contact
+            const contactLink = document.createElement('button');
             navbar.appendChild(contactLink);
-            contactLink.classList.add('nav-link');
+            contactLink.classList.add('nav-link', 'contact-link');
             contactLink.setAttribute('href', '');
             contactLink.textContent = 'Contact';
 
@@ -208,3 +209,89 @@ export const loadBasePage = () => {
                 githubBtn.appendChild(githubImg);
                 githubImg.setAttribute('src', githubSvg);
 };
+
+export const bindBasePage = (hp, mp, ap, cp) => {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const homeLink = document.querySelector('.home-link');
+    const menuLink = document.querySelector('.menu-link');
+    const aboutLink = document.querySelector('.about-link');
+    const contactLink = document.querySelector('.contact-link');
+
+    console.log(menuLink.classList);
+
+    homeLink.addEventListener('click', () => {
+        const content = document.querySelector('#content');
+
+        // remove current-page class from all nav links
+        for(let i = 0; i < navLinks.length; i++) {
+            navLinks[i].classList.remove('current-page');
+        };
+
+        // add current-page class to home link
+        homeLink.classList.add('current-page');
+
+        // clear page
+        while(content.firstChild) {
+            content.removeChild(content.firstChild);
+        }
+
+        hp.render();
+    });
+
+    menuLink.addEventListener('click', () => {
+        const content = document.querySelector('#content');
+
+        // remove current-page class from all nav links
+        for(let i = 0; i < navLinks.length; i++) {
+            navLinks[i].classList.remove('current-page');
+        };
+
+        // add current-page class to home link
+        menuLink.classList.add('current-page');
+
+        // clear page
+        while(content.firstChild) {
+            content.removeChild(content.firstChild);
+        }
+
+        mp.render();
+    });
+
+    aboutLink.addEventListener('click', () => {
+        const content = document.querySelector('#content');
+
+        // remove current-page class from all nav links
+        for(let i = 0; i < navLinks.length; i++) {
+            navLinks[i].classList.remove('current-page');
+        };
+
+        // add current-page class to home link
+        aboutLink.classList.add('current-page');
+
+        // clear page
+        while(content.firstChild) {
+            content.removeChild(content.firstChild);
+        }
+
+        ap.render();
+    });
+
+    contactLink.addEventListener('click', () => {
+        const content = document.querySelector('#content');
+
+        // remove current-page class from all nav links
+        for(let i = 0; i < navLinks.length; i++) {
+            navLinks[i].classList.remove('current-page');
+        };
+
+        // add current-page class to home link
+        contactLink.classList.add('current-page');
+
+        // clear page
+        while(content.firstChild) {
+            content.removeChild(content.firstChild);
+        }
+
+        cp.render();
+    });
+}

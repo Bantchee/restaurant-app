@@ -14,7 +14,7 @@ export const homePage = () => {
 
         // add home-page to class list
         state.content.classList.add("home-page");
-        
+
         slideShow();
         bindings();
     };
@@ -142,7 +142,8 @@ export const homePage = () => {
         dots[state.slideIndex-1].classList.add("active");
     }
 
-    return Object.assign({}, 
+    return Object.assign(
+        {}, 
         state, 
         {render});
 };
