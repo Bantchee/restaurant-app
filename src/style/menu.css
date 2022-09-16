@@ -1,0 +1,54 @@
+.menu-page {
+    display: grid !important; 
+    grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "burger burger pizza pizza fries fries"
+        "drinks drinks drinks iceCream iceCream iceCream";
+    width: 60%;
+    justify-self: center;
+}
+
+.menu-page .item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-page .burger {
+    grid-area: burger;
+}
+
+.menu-page .pizza {
+    grid-area: pizza;
+}
+
+.menu-page .fries {
+    grid-area: fries;
+}
+
+.menu-page .drinks {
+    grid-area: drinks;
+    margin-left: 125px;
+}
+
+.menu-page .ice-cream {
+    grid-area: iceCream;
+    margin-right: 125px;
+}
+
+.menu-page .item-container .img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border: 5px var(--black) solid;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.menu-page .item-container .text {
+    color: var(--white);
+    text-align: center;
+    font-size: 36px;
+    margin: 0px;
+}

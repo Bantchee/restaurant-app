@@ -5,6 +5,7 @@ import { aboutPage } from './aboutPage';
 import { contactPage } from './contactPage';
 import './style/index.css'
 import './style/home.css'
+import './style/menu.css'
 
 loadBasePage();
 const hp = homePage();
