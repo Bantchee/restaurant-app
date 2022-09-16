@@ -116,7 +116,7 @@ footer .social-container {
     align-items: center;
 }
 
-footer button.social {
+footer a.social {
     width: 48px;
     height: 48px;
     background-color: rgba(0, 0, 0, 0.6);
@@ -127,11 +127,11 @@ footer button.social {
     align-items: center;
 }
 
-footer button.social:hover {
+footer a.social:hover {
     background-color: black;
 }
 
-footer button.social img {
+footer a.social img {
     width: 30px;
     height: 30px;
 }

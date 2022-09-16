@@ -165,30 +165,37 @@ export const loadBasePage = () => {
             restaurantFooter.appendChild(socialLinksContainer);
             socialLinksContainer.classList.add('social-container', 'container');
                 // Btn : Instagram
-                const instagramBtn = document.createElement('button');
-                socialLinksContainer.appendChild(instagramBtn);
-                instagramBtn.classList.add('instagram', 'social');
+                const instagramLink = document.createElement('a');
+                socialLinksContainer.appendChild(instagramLink);
+                instagramLink.classList.add('instagram', 'social');
+                instagramLink.setAttribute('href', 'https://instagram.com');
+                instagramLink.setAttribute('target', '_blank');
                     // Img : Instagram
                     const instagramImg = document.createElement('img');
-                    instagramBtn.appendChild(instagramImg);
+                    instagramLink.appendChild(instagramImg);
                     instagramImg.setAttribute('src', instagramSvg);
 
                 // Btn : YouTube
-                const youtubeBtn = document.createElement('button');
-                socialLinksContainer.appendChild(youtubeBtn);
-                youtubeBtn.classList.add('youtube', 'social');
+                const youtubeLink = document.createElement('a');
+                socialLinksContainer.appendChild(youtubeLink);
+                youtubeLink.classList.add('youtube', 'social');
+                youtubeLink.setAttribute('href', 'https://youtube.com');
+                youtubeLink.setAttribute('target', '_blank');
+                
                     // Img : YouTube
                     const youtubeImg = document.createElement('img');
-                    youtubeBtn.appendChild(youtubeImg);
+                    youtubeLink.appendChild(youtubeImg);
                     youtubeImg.setAttribute('src', youtubeSvg);
 
                 // Btn : Twitter
-                const twitterBtn = document.createElement('button');
-                socialLinksContainer.appendChild(twitterBtn);
-                twitterBtn.classList.add('twitter', 'social');
+                const twitterLink = document.createElement('a');
+                socialLinksContainer.appendChild(twitterLink);
+                twitterLink.classList.add('twitter', 'social');
+                twitterLink.setAttribute('href', 'https://twitter.com');
+                twitterLink.setAttribute('target', '_blank');
                     // Img : Twitter
                     const twitterImg = document.createElement('img');
-                    twitterBtn.appendChild(twitterImg);
+                    twitterLink.appendChild(twitterImg);
                     twitterImg.setAttribute('src', twitterSvg);
                     
         // Div : Github Footer
@@ -200,13 +207,16 @@ export const loadBasePage = () => {
             gitHubFooter.appendChild(text);
             text.classList.add('text');
             text.innerHTML = "&#169; Jar'Zeno Jarrett"
-            // Btn : GitHub
-            const githubBtn = document.createElement('button');
-            gitHubFooter.appendChild(githubBtn);
-            githubBtn.classList.add('github', 'social');
+            // Anchor : GitHub
+            const githubLink = document.createElement('a');
+            gitHubFooter.appendChild(githubLink);
+            githubLink.classList.add('github', 'social');
+            githubLink.setAttribute('href', 'https://github.com/Bantchee');
+            githubLink.setAttribute('target', '_blank');
+
                 // Img : GitHub
                 const githubImg = document.createElement('img');
-                githubBtn.appendChild(githubImg);
+                githubLink.appendChild(githubImg);
                 githubImg.setAttribute('src', githubSvg);
 };
 
