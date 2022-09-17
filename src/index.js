@@ -3,9 +3,10 @@ import { homePage } from './homePage';
 import { menuPage } from './menuPage';
 import { aboutPage } from './aboutPage';
 import { contactPage } from './contactPage';
-import './style/index.css'
-import './style/home.css'
-import './style/menu.css'
+import './style/index.css';
+import './style/home.css';
+import './style/menu.css';
+import './style/about.css';
 
 loadBasePage();
 const hp = homePage();

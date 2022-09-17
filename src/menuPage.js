@@ -14,7 +14,7 @@ export const menuPage = () => {
         // reset content class list
         state.content.classList = "";
 
-        // add home-page to class list
+        // add menu-page to class list
         state.content.classList.add("menu-page");
 
         // Div : Burger
@@ -91,6 +91,7 @@ export const menuPage = () => {
             const modalContent = document.querySelector('.menu-modal-content');
 
             while(modalContent.firstChild) {
+                console.log('exit');
                 modalContent.removeChild(modalContent.firstChild);
             }
 

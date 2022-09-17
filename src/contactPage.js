@@ -7,7 +7,7 @@ export const contactPage = () => {
         // reset content class list
         state.content.classList = "";
 
-        // add home-page to class list
+        // add contact-page to class list
         state.content.classList.add("contact-page");
         
     };

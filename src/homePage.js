@@ -8,6 +8,7 @@ export const homePage = () => {
         slideIndex: 1,
     };
 
+    // render home page elements to div#contents
     const render = () => {
         // reset content class list
         state.content.classList = "";
@@ -19,6 +20,7 @@ export const homePage = () => {
         bindings();
     };
 
+    // Add events to home page elements
     const bindings = () => {
         // Get Slide Arrows
         const nextArrow = document.getElementsByClassName('next')[0];
@@ -43,6 +45,7 @@ export const homePage = () => {
         };
     };
 
+    // add slideShow element to div#content
     const slideShow = () => {
         // Div : Slide Show Container
         const divSlideShow = document.createElement('div');
@@ -56,6 +59,7 @@ export const homePage = () => {
         showSlides(state.slideIndex);
     };
 
+    // add slideContainer element to slideshow element
     const slideContainer = () => {
         // Div : Slide Container
         const divSlideContainer = document.createElement('div');
@@ -87,6 +91,7 @@ export const homePage = () => {
             nextArrow.innerHTML = '&#10095;';
     };
 
+    // add slide element to slideContainer element
     const slide = (num, imgUrl) => {
         // Div : Slide
         const divSlide = document.createElement('div');
@@ -95,6 +100,7 @@ export const homePage = () => {
         divSlide.style.backgroundImage = `url(${imgUrl})`;
     };
 
+    // add dotContainer element to slideShow element
     const dotContainer = () => {
         // Div : Dot Container
         const divDotContainer = document.createElement('div');
@@ -107,6 +113,7 @@ export const homePage = () => {
         dot(3);
     };
 
+    // add dot element to dotContainer element
     const dot = (num) => {
         // Span : Dot
         const spanDot = document.createElement('span');
@@ -124,6 +131,7 @@ export const homePage = () => {
         showSlides(state.slideIndex = n)
     }
 
+    // Home page slide show functionality, display to screen
     const showSlides = (n) => {
         let i;
         let slides = document.getElementsByClassName('slide');

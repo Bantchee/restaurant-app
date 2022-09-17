@@ -1,0 +1,25 @@
+.about-page  {
+    color: var(--white);
+    flex-direction: column;
+}
+
+.about-page .owner-element {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.about-page .owner-element .owner-name-container .owner-name {
+    font-size: 2em;
+    color: var(--white);
+}
+
+.about-page .owner-element .owner-img {
+    width: 250px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 3px solid var(--white);
+    border-radius: 16px;
+}
