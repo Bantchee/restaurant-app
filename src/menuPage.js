@@ -142,7 +142,7 @@ export const menuPage = () => {
             const exit = document.createElement('span');
             exitDiv.appendChild(exit);
             exit.classList.add('exit');
-            exit.textContent = 'X';
+            exit.innerHTML = '&#10005;';
 
             // Switch (type)
             switch(type) {
