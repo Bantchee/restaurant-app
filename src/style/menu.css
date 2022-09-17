@@ -50,7 +50,7 @@
 .menu-page .item-container .text {
     color: var(--white);
     text-align: center;
-    font-size: 36px;
+    font-size: 2.25em;
     margin: 0px;
 }
 
@@ -82,7 +82,7 @@
 }
 
 .menu-modal .menu-modal-content .exit {
-    font-size: 24px;
+    font-size: 1.5em;
     color: black;
     margin: 0px;
     justify-self: right;
@@ -94,12 +94,12 @@
 }
 
 .menu-modal .menu-modal-content .title {
-    font-size: 36px;
+    font-size: 2em;
     margin: 0px;
 }
 
 .menu-modal .menu-modal-content li {
-    font-size: 24px;
+    font-size: 1.5em;
     list-style: none;
     padding: 0px;
 }
