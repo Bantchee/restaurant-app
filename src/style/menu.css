@@ -1,6 +1,6 @@
 .menu-page {
     display: grid !important; 
-    grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr;
+    /* grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr; */
     grid-template-areas: 
         "burger burger pizza pizza fries fries"
         "drinks drinks drinks iceCream iceCream iceCream";
@@ -12,6 +12,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
 }
 
 .menu-page .burger {
@@ -28,12 +29,12 @@
 
 .menu-page .drinks {
     grid-area: drinks;
-    margin-left: 125px;
+    margin-left: 75px;
 }
 
 .menu-page .ice-cream {
     grid-area: iceCream;
-    margin-right: 125px;
+    margin-right: 75px;
 }
 
 .menu-page .item-container .img {
@@ -87,10 +88,10 @@
     justify-self: right;
     cursor: pointer;
 }
+
 .menu-modal .menu-modal-content .exit:hover {
     color: red;
 }
-
 
 .menu-modal .menu-modal-content .title {
     font-size: 36px;
