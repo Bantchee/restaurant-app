@@ -49,10 +49,34 @@ export const menuPage = () => {
     const bindings = () => {
         // Get Menu Items
         const burgerItem = document.querySelector('.burger');
+        const pizzaItem = document.querySelector('.pizza');
+        const friesItem = document.querySelector('.fries');
+        const drinksItem = document.querySelector('.drinks');
+        const iceCreamItem = document.querySelector('.ice-cream');
 
         // Bindings
         burgerItem.addEventListener('click', () => {
             changeModal('burger');
+            state.modal.style.display = 'flex';
+            exitBinding();
+        });
+        pizzaItem.addEventListener('click', () => {
+            changeModal('pizza');
+            state.modal.style.display = 'flex';
+            exitBinding();
+        });
+        friesItem.addEventListener('click', () => {
+            changeModal('fries');
+            state.modal.style.display = 'flex';
+            exitBinding();
+        });
+        drinksItem.addEventListener('click', () => {
+            changeModal('drinks');
+            state.modal.style.display = 'flex';
+            exitBinding();
+        });
+        iceCreamItem.addEventListener('click', () => {
+            changeModal('ice-cream');
             state.modal.style.display = 'flex';
             exitBinding();
         });
@@ -109,19 +133,20 @@ export const menuPage = () => {
     const changeModal = (type) => {
         // Get Div : Modal-Content
         const modalContent = state.modal.querySelector('.menu-modal-content');
+
+        // Exit
+        const exitDiv = document.createElement('div');
+        modalContent.appendChild(exitDiv);
+        exitDiv.classList.add('exit-div');
+            // Exit Text
+            const exit = document.createElement('span');
+            exitDiv.appendChild(exit);
+            exit.classList.add('exit');
+            exit.textContent = 'X';
+
             // Switch (type)
             switch(type) {
                 case 'burger':
-                    // Exit
-                    const exitDiv = document.createElement('div');
-                    modalContent.appendChild(exitDiv);
-                    exitDiv.classList.add('exit-div');
-                        // Exit Text
-                        const exit = document.createElement('span');
-                        exitDiv.appendChild(exit);
-                        exit.classList.add('exit');
-                        exit.textContent = 'X';
-
                     // Sizes
                     const sizesTitle = document.createElement('p');
                     modalContent.appendChild(sizesTitle);
@@ -142,6 +167,95 @@ export const menuPage = () => {
                             const largeSize = document.createElement('li');
                             sizeList.appendChild(largeSize);
                             largeSize.textContent = "Large $15";
+                break;
+                case 'pizza':
+                    // Sizes
+                    const pizzaSizesTitle = document.createElement('p');
+                    modalContent.appendChild(pizzaSizesTitle);
+                    pizzaSizesTitle.textContent = "Pizza Sizes :"
+                    pizzaSizesTitle.classList.add('title');
+                        // Ul
+                        const pizzSizeList = document.createElement('ul');
+                        modalContent.appendChild(pizzSizeList);
+                            // Small $5
+                            const smallPizzaSize = document.createElement('li');
+                            pizzSizeList.appendChild(smallPizzaSize);
+                            smallPizzaSize.textContent = "Small $10";
+                            // Medium $10
+                            const mediumPizzaSize = document.createElement('li');
+                            pizzSizeList.appendChild(mediumPizzaSize);
+                            mediumPizzaSize.textContent = "Medium $15";
+                            // Large $15
+                            const largePizzaSize = document.createElement('li');
+                            pizzSizeList.appendChild(largePizzaSize);
+                            largePizzaSize.textContent = "Large $20";
+            break;
+            case 'fries' :
+                // Sizes
+                const friesSizesTitle = document.createElement('p');
+                modalContent.appendChild(friesSizesTitle);
+                friesSizesTitle.textContent = "Fries Sizes :"
+                friesSizesTitle.classList.add('title');
+                    // Ul
+                    const friesSizeList = document.createElement('ul');
+                    modalContent.appendChild(friesSizeList);
+                        // Small $5
+                        const smallFriesSize = document.createElement('li');
+                        friesSizeList.appendChild(smallFriesSize);
+                        smallFriesSize.textContent = "Small $1";
+                        // Medium $10
+                        const mediumFriesSize = document.createElement('li');
+                        friesSizeList.appendChild(mediumFriesSize);
+                        mediumFriesSize.textContent = "Medium $3";
+                        // Large $15
+                        const largeFriesSize = document.createElement('li');
+                        friesSizeList.appendChild(largeFriesSize);
+                        largeFriesSize.textContent = "Large $5";
+            break;
+            case 'drinks' :
+                // Sizes
+                const drinkSizesTitle = document.createElement('p');
+                modalContent.appendChild(drinkSizesTitle);
+                drinkSizesTitle.textContent = "Drink Sizes :"
+                drinkSizesTitle.classList.add('title');
+                    // Ul
+                    const drinkSizeList = document.createElement('ul');
+                    modalContent.appendChild(drinkSizeList);
+                        // Small $5
+                        const smallDrinkSize = document.createElement('li');
+                        drinkSizeList.appendChild(smallDrinkSize);
+                        smallDrinkSize.textContent = "Small $1";
+                        // Medium $10
+                        const mediumDrinkSize = document.createElement('li');
+                        drinkSizeList.appendChild(mediumDrinkSize);
+                        mediumDrinkSize.textContent = "Medium $3";
+                        // Large $15
+                        const largeDrinkSize = document.createElement('li');
+                        drinkSizeList.appendChild(largeDrinkSize);
+                        largeDrinkSize.textContent = "Large $5";
+            break;
+            case 'ice-cream' : 
+            // flavors
+            const iceCreamFlavorsTitle = document.createElement('p');
+            modalContent.appendChild(iceCreamFlavorsTitle);
+            iceCreamFlavorsTitle.textContent = "Ice Cream Flavors :"
+            iceCreamFlavorsTitle.classList.add('title');
+                // Ul
+                const iceCreamFlavorsList = document.createElement('ul');
+                modalContent.appendChild(iceCreamFlavorsList);
+                    // vanilla
+                    const vanilla = document.createElement('li');
+                    iceCreamFlavorsList.appendChild(vanilla);
+                    vanilla.textContent = "Vanilla $3";
+                    // chocolate
+                    const chocolate = document.createElement('li');
+                    iceCreamFlavorsList.appendChild(chocolate);
+                    chocolate.textContent = "Chocolate $3";
+                    // strawberry
+                    const strawberry = document.createElement('li');
+                    iceCreamFlavorsList.appendChild(strawberry);
+                    strawberry.textContent = "Strawberry $3";
+            break;  
             }
                 // Case : burger
                     // Sizes and Prices

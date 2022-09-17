@@ -26,11 +26,9 @@ export const homePage = () => {
         
         // Bind functionality to Slide Arrows
         nextArrow.addEventListener('click', () => {
-            console.log('nextArrow');
             plusSlides(1);
         }); 
         prevArrow.addEventListener('click', () => {
-            console.log('prevArrow');
             plusSlides(-1);
         }); 
 

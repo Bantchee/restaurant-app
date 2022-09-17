@@ -226,8 +226,6 @@ export const bindBasePage = (hp, mp, ap, cp) => {
     const aboutLink = document.querySelector('.about-link');
     const contactLink = document.querySelector('.contact-link');
 
-    console.log(menuLink.classList);
-
     homeLink.addEventListener('click', () => {
         const content = document.querySelector('#content');
 
