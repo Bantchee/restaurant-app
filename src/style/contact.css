@@ -45,6 +45,9 @@
     height: 300px;
     border: 5px solid var(--black);
     border-radius: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .contact-page .address-div {
