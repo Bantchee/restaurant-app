@@ -1,3 +1,7 @@
+.home-page {
+    height: calc(100vh - 150px);
+}
+
 .home-page .slide-show .slide-container {
     position: relative;
 }

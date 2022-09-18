@@ -6,6 +6,7 @@
         "drinks drinks drinks iceCream iceCream iceCream";
     width: 60%;
     justify-self: center;
+    height: calc(100vh - 150px);
 }
 
 .menu-page .item-container {
