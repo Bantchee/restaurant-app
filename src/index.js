@@ -7,6 +7,7 @@ import './style/index.css';
 import './style/home.css';
 import './style/menu.css';
 import './style/about.css';
+import './style/contact.css';
 
 loadBasePage();
 const hp = homePage();

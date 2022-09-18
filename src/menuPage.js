@@ -37,11 +37,6 @@ export const menuPage = () => {
             // Div : Burger Img Background
             // Para : 'Burger'
         createMenuItem('ice cream', iceCreamImg);
-        
-        // Div : Modal
-            // Div : Modal-Background-Tint
-            // Div : Modal-Content
-        createModal();
 
         bindings();
     };
@@ -56,26 +51,31 @@ export const menuPage = () => {
 
         // Bindings
         burgerItem.addEventListener('click', () => {
+            createModal();
             changeModal('burger');
             state.modal.style.display = 'flex';
             exitBinding();
         });
         pizzaItem.addEventListener('click', () => {
+            createModal();
             changeModal('pizza');
             state.modal.style.display = 'flex';
             exitBinding();
         });
         friesItem.addEventListener('click', () => {
+            createModal();
             changeModal('fries');
             state.modal.style.display = 'flex';
             exitBinding();
         });
         drinksItem.addEventListener('click', () => {
+            createModal();
             changeModal('drinks');
             state.modal.style.display = 'flex';
             exitBinding();
         });
         iceCreamItem.addEventListener('click', () => {
+            createModal();
             changeModal('ice-cream');
             state.modal.style.display = 'flex';
             exitBinding();
@@ -88,14 +88,7 @@ export const menuPage = () => {
 
         //Binding
         exit.addEventListener('click', () => {
-            const modalContent = document.querySelector('.menu-modal-content');
-
-            while(modalContent.firstChild) {
-                console.log('exit');
-                modalContent.removeChild(modalContent.firstChild);
-            }
-
-            state.modal.style.display = 'none';
+            document.body.removeChild(state.modal);
         })
     }
 
