@@ -2,6 +2,8 @@
     color: var(--white);
     flex-direction: column;
     row-gap: 16px;
+    justify-content: start !important;
+    margin-top: 25px;
 }
 
 .contact-page .hours-div {
@@ -10,6 +12,7 @@
     justify-content: center;
     align-items: center;
     row-gap: 8px;
+    width: 300px;
 }
 
 .contact-page .title {
@@ -26,7 +29,7 @@
     list-style: none;
     margin: 0px;
     padding: 0px;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 .contact-page .container {
@@ -37,7 +40,7 @@
 
 .contact-page .text {
     margin: 0px;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 .contact-page .map {
@@ -55,6 +58,7 @@
     flex-direction: column;
     align-items: end;
     row-gap: 8px;
+    width: 275px;
 }
 
 .contact-page .contact-div {
@@ -62,6 +66,7 @@
     flex-direction: column;
     align-items: start;
     row-gap: 8px;
+    width: 275px;
 }
 
 .contact-page button {
