@@ -1,6 +1,8 @@
 .about-page  {
     color: var(--white);
     flex-direction: column;
+    font-size: 1em;
+    margin: 24px 0px;
 }
 
 .about-page .owner-element {
@@ -22,4 +24,42 @@
     background-size: cover;
     border: 3px solid var(--white);
     border-radius: 16px;
+}
+
+.about-page .rating-container {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+}
+
+.about-page .rating-container p {
+    margin: 0px;
+    font-size: 2em;
+}
+
+.about-page .star-text {
+    text-align: center;
+    margin: 0px;
+}
+
+.about-page .our-story-element {
+    width: 400px;
+    background-color: var(--dark-green);
+    border: 5px solid var(--black);
+    border-radius: 16px;
+    margin: 24px 0px;
+    padding: 16px;
+}
+
+.about-page .our-story-element .our-story-title {
+    font-size: 2em;
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 8px;
+}
+
+.about-page .our-story-element p {
+    font-size: 1.25em;
+    margin: 0px;
+    text-align: center;
 }
