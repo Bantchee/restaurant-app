@@ -20,6 +20,12 @@ A one page site that dynamically renders four different ‘pages’ with javascr
 * Figma
 * Webpack
 
+## Future Updates
+* Shrink images down to imporve image load times
+
+## Third Party
+* [modern-normalize](<https://github.com/sindresorhus/modern-normalize>)
+
 ## Contributers
 [Jar'Zeno Jarrett (Bantchea)](<https://github.com/Bantchee>)
 
